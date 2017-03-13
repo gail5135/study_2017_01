@@ -1,0 +1,28 @@
+package week01;
+
+import java.util.*;
+
+public class B_Tree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    List<Integer> tree = new ArrayList<Integer>();
+	    Scanner scan = new Scanner(System.in);
+	    int h = scan.nextInt();
+
+
+	    // 이제는 배열 요소 (숫자) 한꺼번에 채우기
+	    for (int x = 0; x < Math.pow(2, h); x++) tree.add(scan.nextInt());
+
+	    for(int x=(int)Math.pow(2,h);x>=0;x/=2)
+		      System.out.format("[%d] ", tree.get(x-1));
+
+	    
+	    
+	    // 배열 출력
+	    for (int i = 0; i < tree.size(); i++)
+	      System.out.format("[%d] ", tree.get(i));
+
+	}
+
+}

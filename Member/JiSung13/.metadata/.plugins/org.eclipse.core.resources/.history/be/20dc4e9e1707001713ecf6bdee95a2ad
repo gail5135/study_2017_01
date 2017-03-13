@@ -1,0 +1,22 @@
+package week01;
+
+public class B_Tree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    List<Integer> tree = new ArrayList<Integer>();
+	    // 배열 요소 몇 개 채우기, 문자열 숫자 가리지 않고
+	    tree.add(123);
+	    tree.add(2);
+
+	    // 이제는 배열 요소 (숫자) 한꺼번에 채우기
+	    for (int x = 10; x <= 100; x++) oPerlishArray.add(x);
+
+
+	    // 배열 출력
+	    for (int i = 0; i < oPerlishArray.size(); i++)
+	      System.out.format("[%d] = %s%n", i, oPerlishArray.get(i));
+
+	}
+
+}
