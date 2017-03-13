@@ -1,88 +1,40 @@
 #include "BT.h"
 
 void main() {
-	int height;
+//	int height;
 	int key;	
-	int max = 0;
-	int result = 0;
-
 	puts("put height");
 	scanf("%d",&height);
 	MaxSize = pow(2, height+1)-1;
 
 	MakeTree(height);
 
-	for(int i = 1; i < MaxSize; i++) {
-		scanf("%d",&key);
-		tree[i] = key;
-	}
+	insert(1, key);
 	
-//	puts("???");	
 
-	for(int i = pow(2, height)-1; i < MaxSize; i++) {
-//		puts("1");
-		if(max < AddEdge(i))
-			max = AddEdge(i);
-//		puts("2");
-	}
-	printf("!!!! %d",max);
-//	puts("3");
-
-
-	for(int i = pow(2, height)-1; i < MaxSize; i++) {
-		while(max > AddEdge(i)){
-		//if(max > AddEdge(i)) {
-			int position = i;
-			int min = 10000;
-			int k;
-			while(position > 0) {
-				if(min >= tree[position]) {
-					min = tree[position];
-					 k = position;
-					
-				}
-				if(position%2 == 0) 
-					position = (position-1)/2;
-				else
-					position /= 2;
-			}
-	
-			while(max != AddEdge(i)) { 
-//				tree[k]++;
-				int j = i;
-				if(i < MaxSize-pow(2, height-1)) {
-
-				for(int j = i; j < MaxSize-pow(2, height-1); j++) {
-				//while(j < MaxSize-pow(2,height-1)) {
-					if(max == AddEdge(j)) {
-						j = 0;	
-						break;
-					}
-//					tree[k]++;
-					
-				}
+	PlusEdge();
+	PrintTree();
+	printf("result = %d", Result());
+/*	for(int i = pow(2, height)-1; i < MaxSize; i++) {
+		puts("1");
+		printf("max : %d",max);
+		int k = FindTopEdge(i);
+		printf("  k : %d\n",k);
+		puts("2");
+		while(max != AddEdge(i)){
+//			puts("2");
+			//int k = FindMinEdge(i);
+			tree[k]++;
+			if(MaxSum() > max) {
+				tree[k]--;
+				if(i%2 == 0) {
+					k = 2*k+2;
 				}
 				else {
-				puts("1");
-				for(int j = i; j < MaxSize; j++) {
-			//	while(j < MaxSize) {
-					puts("2");
-					if(max == AddEdge(j)) {
-						j = 0;
-						break;
-					}
-//					tree[k]++;
-			//		j++;
+					k = 2*k+1;
 				}
-				}
-				if(j==0) 
-					break;
-				tree[k]++;				
-					
-			//	if(AddEdge(i+1)==max)
-			//		break;
+			//	tree[k]++;
 			}
-			
 		}
 	}
 	for(int i = 0; i < MaxSize; i++) {
@@ -91,6 +43,6 @@ void main() {
 	for(int i = 0; i < MaxSize; i++) {
 		result += tree[i];
 	}
-	printf("%d",result);
+	printf("%d",result);*/
 }	
 
