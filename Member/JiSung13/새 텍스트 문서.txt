@@ -1,0 +1,2 @@
+1.Max값을 찾는다.
+->exteranl부터 root까지 edge의 합이 조정전의 가장 큰 path의 edge 로 되어있으므로
