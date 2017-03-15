@@ -76,7 +76,7 @@ void PlusEdge() {
 }
 
 void PrintTree() {
-	for(int i = 0; i < MaxSize; i++)
+	for(int i = 1; i < MaxSize; i++)
 		printf("%d ",tree[i]);
 	puts("");
 }
