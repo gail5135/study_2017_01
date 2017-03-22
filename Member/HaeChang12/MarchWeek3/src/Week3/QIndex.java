@@ -1,5 +1,8 @@
-package com.company;
+package Week3;
 
+/**
+ * Created by gail5135 on 2017. 3. 22..
+ */
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
