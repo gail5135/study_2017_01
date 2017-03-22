@@ -48,11 +48,4 @@ public class QIndex {
         }
         System.out.println(0);
     }
-
-    // Array를 출력하는 메소드
-    public void showArray(int[] array){
-        for(int a = 0; a < array.length; a++){
-            System.out.print(array[a] + "\t");
-        }
-    }
 }
