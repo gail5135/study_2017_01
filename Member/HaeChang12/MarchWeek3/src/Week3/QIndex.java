@@ -41,7 +41,7 @@ public class QIndex {
         }
     }
 
-    // q-index를 체크하는 메소드
+    // q-index를 체크 하는 메소드
     public void calcuQ(int[] Q){
         for(int i = 0; i < Q.length; i++){
             if(Q[i] == (Q.length-i)) {
