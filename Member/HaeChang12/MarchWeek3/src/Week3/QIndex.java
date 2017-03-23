@@ -43,12 +43,18 @@ public class QIndex {
 
     // q-index를 체크 하는 메소드
     public void calcuQ(int[] Q){
-        for(int i = 0; i < Q.length; i++){
-            // q-index를 찾았을 시 q-index를 화면에 출력하고 메소드 종료
-            if(Q[i] == (Q.length-i)) {
-                System.out.println(Q[i]);
+        int count = 0;
+        for(int i = 1; i <= Q.length; i++){
+            for(int j = 0; j < Q.length; j++) {
+                if (i <= Q[j]) {
+                    count++;
+                }
+            }
+            if (i == count) {
+                System.out.println(count);
                 return;
             }
+            count = 0;
         }
         // q-index가 없을 시 화면에 0 출력하고 메소드 종료
         System.out.println(0);
